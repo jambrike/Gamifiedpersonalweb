@@ -1,0 +1,115 @@
+*{ box-sizing:border-box; }
+
+body{
+  font-family: fantasy;
+  background-color:#000000;
+  color:#ffffff;
+  margin:0;
+  padding:0;
+}
+
+.header{
+  background-color:#000000;
+  padding:20px;
+  text-align:center;
+  color:white;
+  margin:10px;
+}
+
+.header h1{
+  font-size:32px;
+  margin-bottom:8px;
+  padding:0;
+  font-weight:bold;
+}
+
+.header h2{
+  font-size:14px;
+  margin-bottom:2px;
+  padding:0;
+}
+
+.panelwrapper{
+  display:flex;
+  max-width:900px;
+  margin: 0 auto;
+  padding:16px;
+}
+
+.gamepanel{
+  flex:3;
+  background-color:#050505;
+  padding:20px;
+  margin:18px auto;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.12);
+}
+
+#panelarea{
+  height:550px;
+  width:100%;
+  position: relative;
+  overflow:hidden;
+  border-radius:12px;
+  border:2px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.02);
+}
+
+#player{
+  height:48px;
+  width:48px;
+  position:absolute;
+  top:1px;
+  left:50%;
+  transform: translateX(-50%);
+  background: #d01717;
+  border-radius:6px;
+}
+
+#block1{
+  height:48px;
+  width:48px;
+  position:absolute;
+  top:200px;
+  left:300px;
+  background-image: url(something5.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#block2{
+  height:48px;
+  width:48px;
+  position:absolute;
+  top:400px;
+  left:300px;
+  background-image: url(something4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#block3{
+  height:48px;
+  width:48px;
+  position:absolute;
+  top:200px;
+  left:700px;
+  background-image: url(something3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#block4{
+  height:48px;
+  width:48px;
+  position:absolute;
+  top:400px;
+  left:700px;
+  background-image: url(something2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
