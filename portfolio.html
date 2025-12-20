@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Some stuff bout me</title>
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#2b2b2b;
+      color:white;
+      text-align:center;
+    }
+
+    .header{
+      background:#242424;
+      padding:18px 10px;
+      border-bottom:3px solid #1c1c1c;
+    }
+
+    .header h1{
+      margin:0;
+      font-size:34px;
+      letter-spacing:0.5px;
+    }
+
+    .header h2{
+      margin:6px 0 0;
+      font-size:16px;
+      font-weight:normal;
+      opacity:0.85;
+    }
+
+    .pagewall{
+      max-width: 900px;
+      margin: 22px auto;
+      padding: 18px;
+      text-align:left;
+      background:#242424;
+      border:2px solid #202020;
+      border-radius:10px;
+    }
+
+    .pagewall p{
+      margin: 10px 0;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .btnrow{
+      margin-top: 14px;
+      text-align:center;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#2f2f2f;
+      color:white;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      border:2px solid #1c1c1c;
+    }
+    .btn:hover{ background:#262626; }
+
+    .speech-stage{
+      min-height: 320px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      align-items:stretch;
+      margin-bottom:14px;
+      padding: 6px 2px;
+    }
+
+    .speechbubble{
+      display:inline-block;
+      max-width: 70%;
+      background: linear-gradient(180deg,#232323,#1b1b1b);
+      color:#fff;
+      padding:14px 16px;
+      border-radius:14px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.5);
+      position:relative;
+      transform: translateY(-18px);
+      opacity:0;
+      animation: drop 600ms cubic-bezier(.22,.9,.3,1) forwards;
+    }
+
+    .speechbubble:after{
+      content:"";
+      position:absolute;
+      left:18px;
+      bottom:-10px;
+      border-width:10px 10px 0 10px;
+      border-style:solid;
+      border-color: #1b1b1b transparent transparent transparent;
+    }
+
+    /* header bubbles appear left */
+    .speechbubble.header{
+      align-self:flex-start;
+      background: linear-gradient(180deg,#2d2d2d,#222);
+      max-width: 60%;
+    }
+
+    /* message bubbles appear right */
+    .speechbubble.message{
+      align-self:flex-end;
+      background: linear-gradient(180deg,#2d2d2d,#222);
+      color: #fff;
+      max-width: 70%;
+      text-align: right;
+    }
+    .speechbubble.message:after{
+      left:auto;
+      right:18px;
+      border-color: #373737 transparent transparent transparent;
+    }
+
+    @keyframes drop {
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .speechbubble h3,
+    .speechbubble p {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeUp 520ms cubic-bezier(.22,.9,.3,1) forwards;
+      margin: 0 0 8px 0;
+    }
+    @keyframes fadeUp {
+      to { opacity:1; transform: translateY(0); }
+    }
+
+    /* no way i was doing all this timing myself */
+    .stagger1 { animation-delay: 160ms; }
+    .stagger2 { animation-delay: 420ms; }
+    .stagger3 { animation-delay: 680ms; }
+    .stagger4 { animation-delay: 940ms; }
+    .stagger5 { animation-delay: 1200ms; }
+    .stagger6 { animation-delay: 1460ms; }
+    .stagger7 { animation-delay: 1720ms; }
+    .stagger8 { animation-delay: 1980ms; }
+
+    /* inner text appear after bubble */
+    .stagger1 h3, .stagger1 p { animation-delay: 380ms; }
+    .stagger2 h3, .stagger2 p { animation-delay: 640ms; }
+    .stagger3 h3, .stagger3 p { animation-delay: 900ms; }
+    .stagger4 h3, .stagger4 p { animation-delay: 1160ms; }
+    .stagger5 h3, .stagger5 p { animation-delay: 1420ms; }
+    .stagger6 h3, .stagger6 p { animation-delay: 1680ms; }
+    .stagger7 h3, .stagger7 p { animation-delay: 1940ms; }
+    .stagger8 h3, .stagger8 p { animation-delay: 2200ms; }
+
+    @media (max-width:520px){
+      .pagewall { padding:14px; }
+      .speech-stage { min-height: 260px; }
+      .speechbubble, .speechbubble.message, .speechbubble.header { max-width: 100%; }
+      .speechbubble.message { text-align: left; align-self: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Some stuff about me!</h1>
+    <h2>who knows might wanna hire me :)</h2>
+  </div>
+
+  <div class="pagewall">
+    <div class="speech-stage" aria-hidden="false">
+      <div class="speechbubble header stagger1" role="note"><h3>Who am I?</h3></div>
+      <div class="speechbubble message stagger2" role="note"><p>I'm a 17 year old from Ireland who likes building tech projects and learning new things.</p></div>
+
+      <div class="speechbubble header stagger3" role="note"><h3>When did I start?</h3></div>
+      <div class="speechbubble message stagger4" role="note"><p>Since about age 9 I've been fixing tablets, phones, and computers—I've always liked tinkering.</p></div>
+
+      <div class="speechbubble header stagger5" role="note"><h3>Right now</h3></div>
+      <div class="speechbubble message stagger6" role="note"><p>Currently I'm competing in Math Olympiads, attending hackathons, and studying nine higher-level subjects.</p></div>
+
+      <div class="speechbubble header stagger7" role="note"><h3>Where am I?</h3></div>
+      <div class="speechbubble message stagger8" role="note"><p>In my free time I play badminton for my county and work on hardware/software projects.</p></div>
+    </div>
+
+    <div class="btnrow">
+      <a class="btn" href="work.html">Want to see my Work Experience</a>
+    </div>
+  </div>
+</body>
+</html>
