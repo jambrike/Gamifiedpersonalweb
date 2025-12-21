@@ -6,68 +6,131 @@
   <title>Work Experience</title>
   <style>
     body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#474747;
-    color:white;
-    text-align:center;
-  }
+  margin:0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background:#141414;
+  color:#f2f2f2;
+  text-align:center;    
+    }
+    .header{
+  max-width: 980px;
+  margin: 18px auto 10px auto;
+  background:#1d1d1d;
+  border:1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 16px 18px;
+}
 
-  .header{
-    background:#2f2f2f;
-    padding:18px 10px;
-    border-bottom:3px solid #1c1c1c;
-  }
+.header h1{
+  margin:0;
+  font-size: 34px;
+  letter-spacing: 0.3px;
+}
 
+.header h2{
+  margin:6px 0 0 0;
+  font-size: 14px;
+  font-weight: normal;
+  opacity: 0.8;
+  align-content: center;
+}
+.header h3{
+  margin:6px 0 0 0;
+  font-size: 14px;
+  font-weight: normal;
+  opacity: 0.8;
+  align-content: center;
+}
 
-  .header h1{
-    margin:0;
-    font-size:34px;
-    letter-spacing:0.5px;
-  }
+.pagewall{
+  max-width: 980px;
+  margin: 14px auto;
+  background:#1a1a1a;
+  border:1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 16px 18px;
+}
 
-  .header h2{
-    margin:6px 0 0;
-    font-size:16px;
-    font-weight:normal;
-    opacity:0.85;
-  }
+.pagewall p{
+  margin: 10px 0;
+  font-size: 15px;
+  opacity: 0.9;
+}
 
-  .pagewall{
-    max-width: 850px;
-    margin: 22px auto;
-    padding: 18px 18px 12px;
-    text-align:left;
-    background:#2f2f2f;
-    border:2px solid #202020;
-    border-radius:10px;
-  }
+.boxgrid{
+  margin-top: 14px;
+  display:grid;
+  /*to make em fit*/
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.certwrapper{
+  background:#171717;
+  border:1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.certificatebox{
+  height: 100px;
+  border-radius: 24px;
+  border:2px solid #303030;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.certificatebox::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.35);
+}
+
+.certbottom{
+  margin: 10px 2px 2px 2px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.btnrow{
+  max-width: 980px;
+  margin: 40px auto 26px auto;
+  text-align:center;
+  gap: 32px;
+  align-items:center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btnrow button{
+  display:inline-block;
+  text-decoration:none;
+  color:#f2f2f2;
+  background:#232323;
+  border:1px solid #2a2a2a;
+  padding: 24px 22px;
+  border-radius: 12px;
+}
+
+.btn:hover{
+  background:#2a2a2a;
+}
 
   .pagewall p{
     margin: 10px 0;
     line-height: 1.6;
     font-size: 16px;
-
-  }
-  .btnrow{
-    margin-top: 10px;
-    text-align:center;
-  }
-  .btnrow button{
-    background:#1c1c1c82;
-    color:white;
-    border:none;
-    padding:20px 42px;
-    margin:0 6px;
-    border-radius:13px;
-    font-size:14px;
-    cursor:pointer;
   }
   </style>
 </head>
 <body>
   <div class="header">
     <h1>Work Experience</h1>
+    <h2>are you good?</h2>
     </div>
   <div class="pagewall">
     <h2>Differentiate this equation?</h2>
