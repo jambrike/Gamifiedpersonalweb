@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Me blog page</title>
+        <style>
+body{
+    background-color:#afc5f4;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+.header{
+margin-top: 2px;
+ padding:18px 10px;
+    border:3px solid #2f2f2f;   
+    border-radius: 14px;
+    background-color: #737373;
+    max-width: 1100px;
+margin: 12px auto 0 auto;
+}
+.pagewrap{
+    padding: 10px 14px 40px 14px;
+}
+
+.header h1{
+    font-size: 22px;
+    text-align: center;
+    
+}
+.header h2{
+    font-size: 15px;
+    text-align: center;
+
+}
+.blogwall{
+    max-width:1100px;
+    margin:18px auto;
+    padding:18px;
+
+    background:#91919146;
+    border:2px solid #40404035;
+    border-radius:14px;
+    backdrop-filter: blur(6px);
+
+    gap: 14px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+
+
+}
+.card{
+    background: #7e7e7eb5;
+    border:2px solid #40404018; border-radius: 14px;
+    padding:14px; text-align:left;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    
+    cursor:pointer; position:relative;
+    overflow: hidden;
+}
+.card:hover{
+transform: translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.12);
+}
+.card h3{
+    margin:0 0 6px 0 ;
+    font-size:18px;
+}
+.card p {
+    margin:0 0 10px 0;
+    font-size: 14px; line-height: 1.4;
+    opacity: 85%;
+}
+.readmore:hover{
+    border-bottom-color: rgba(0,0,0,0.75)
+}
+.more{
+    display: none;
+    margin-top: 12px;padding-top: 12px;
+    border-top: 1px solid rgba(0,0,0,0.12);
+}
+.card.open{
+    grid-column: 1/-1; /*to make it take up blog wall*/
+    min-height:70vh; transform:none;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+    
+}
+.card.open .more{
+    display:block;
+}
+
+
+        </style>
+    </head>
+    <body> <div class="pagewrap">
+        <div class="header">
+<h1>Blog on all my projects!</h1>
+<h2>what im cookin up</h2>
+        </div>
+        <div class="blogwall">
+            <div class="card">
+            <h3>Midknighter</h3>
+            <p>Made me first somewhat proper game</p>
+            <p>Its a 2d adventure game where you fight through the internet against your own cursor </p>
+            <p>..read more to well see more</p>
+            <div class="more">
+                <h3>something</h3>
+                <p>more explainings stuff</p>
+            </div>
+</div>
+<div class="card">
+    <h3>Silia Glasses </h3>
+    <p>it is in progress</p>
+    <div class="more">
+        <h3>what did u expect to find?</h3>
+    </div>
+</div>
+<div class="card">
+    <h3>Me own alexa</h3>
+    <p>Cool python script i wrote that went through whole wiki simple</p>
+    <p>Took out key information and then sent it to google like the translate text to speech</p>
+    <div class="more">
+        <p>I left it running for like a week on and on sending requests every second and ssh from my phone to check its still running</p>
+        <p>Then tried creating a script that ran through the files from finding key word in sentance through a mic and speech to text. This worked with small smaples but when loaded for everyone my poor chromebook could not handle it. </p>
+        
+    </div>
+</div>
+        </div></div>
+<script> //small script to eventlistener lcick and em escape key
+    const cards=document.querySelectorAll(".card")
+
+   cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const isOpen = card.classList.contains("open");
+      cards.forEach(c => c.classList.remove("open"));
+      if (!isOpen) card.classList.add("open");
+    });
+  });
+///Escape
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      cards.forEach(c => c.classList.remove("open"));
+    }
+  });
+  
+  
+</script>
+    </body>
+</html>
