@@ -4,9 +4,10 @@ It ended up becoming a website for with some fun games built into like some sort
 
 If i ever plan to use it for more than meeting new people and stuff then i will obv add to it and make it tons more professional but for introducing myself i think its great.
 
-simple instructions is the in the opening game use the arrows and you should be able to just progress through the website from there.
+simple instructions is the in the opening game use the arrows and you should be able to just progress through the website from there using the buttons on the bottom.
 
 Build/deploy instructions:
+
 It is simple html css and js,
 So you can fork or download the files from my repository.
 And then either load the index.html from file or host on basic platform such as netlify or cloudflare.
